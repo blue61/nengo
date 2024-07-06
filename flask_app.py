@@ -3,6 +3,8 @@ from nengo import nengo
 
 app = Flask(__name__)
 
+app.config["DEBUG"] = True
+
 @app.route('/')
 def hello () -> str:
     return "Hallo Webwelt from Flask"
