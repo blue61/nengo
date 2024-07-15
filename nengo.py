@@ -55,7 +55,7 @@ reiwa_start = datetime.date( 2019, 5, 1 )
 # Names of Nengos in Kanji
 meiji_s = "明治"
 taisho_s = "大正"
-showa_s = "正和"
+showa_s = "昭和"
 heisei_s = "平成"
 reiwa_s = "令和"
 
@@ -92,9 +92,9 @@ def nengo_jahr(dd : datetime) -> (str, str):
     else:
         raise ValueError
     
-    nengo_jahr = 1 + diff.days // 365
-    if nengo_jahr > 1:
-        jahr_name = japnum(nengo_jahr)
+    jahr = 1 + diff.days // 365
+    if jahr > 1:
+        jahr_name = japnum(jahr)
     else:
         jahr_name = gannen_s
     return (nengo_name, jahr_name)
